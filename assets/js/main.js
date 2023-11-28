@@ -2,8 +2,10 @@
   "use strict";
   
  // menu 
-  $('.siteBar-btn').click( function (){ 
+  $('.siteBar-btn').click( function (event){ 
+    event.preventDefault()
     $('.mobile-menu').toggleClass('siteBar');   
+    $('body').toggleClass('overflow-hidden');   
   }); 
 
  // menu 
@@ -28,12 +30,12 @@
 
 
   // page Animation
-  // AOS.init({
-  //   mirror: true,
-  //   duration: 1500,
-  //   initClassName: 'aos-init',
-  //   once: true,
-  // });
+  AOS.init({
+    mirror: true,
+    duration: 1500,
+    initClassName: 'aos-init',
+    once: true,
+  });
 
   // data-aos="fade-up" 
   // data-aos-delay="300" 
